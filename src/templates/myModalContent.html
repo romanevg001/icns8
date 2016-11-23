@@ -1,0 +1,39 @@
+<div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" ng-model="msearch">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" 
+                            ng-model="sizeSelected" 
+                            ng-options="option.value for option in sizeSelect">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <color-picker ng-model="myColor"></color-picker>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="listIcons" ui-on-Drop="onDrop($event,$data,icons)">
+        <div ui-draggable="true" drag="icon" 
+                    on-drop-success="dropSuccessHandler($event,$index,icons)"
+                    ng-repeat="icon in icons">
+            <div style="background-color: {{myColor}}; mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; -webkit-mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; width:{{sizeSelected.value}}px; height:{{sizeSelected.value}}px; "></div>
+            <!--<img src="data:image/svg+xml;base64,{{icon.svg}}">
+            <div ng-repeat="png in icon.png" ng-show="currentSizeIconsShow['is'+png.width]" style="width: {{png.width}}px">
+                <img src="{{png.link}}" alt="" >
+            </div>-->
+        </div>
+    </div>
+
+     <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="ok()">Close</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<button class="btn" ng-click="openModal()">Add Icons8</button>
+
+ <!--<div class="listIcons" ui-on-Drop="onDrop($event,$data,myis)">
+        <div
+            on-drop-success="dropSuccessHandler($event,$index,myis)"
+            ng-repeat="icon in myis">
+            <div style="background-color: {{myColor}}; mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; -webkit-mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; width:{{sizeSelected.value}}px; height:{{sizeSelected.value}}px; "></div>
+         
+        </div>
+    </div>-->
+
+    <div class="listIcons" ui-on-Drop="onDrop($event,$data,myicons)">
+        <div
+            on-drop-success="dropSuccessHandler($event,$index,myicons)"
+            ng-repeat="icon in myicons">
+            <div style="background-color: {{icon.myColor}}; mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; -webkit-mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; width:{{icon.sizeSelected.value}}px; height:{{icon.sizeSelected.value}}px; "></div>
+         
+        </div>
+    </div>
+
+  <!--<div class="listIcons" ui-on-Drop="onDrop($event,$data,myicons)">
+        <div
+            on-drop-success="dropSuccessHandler($event,$index,myicons)"
+            ng-repeat="icon in myicons">
+            <div style="background-color: {{myColor}}; mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; -webkit-mask: url('data:image/svg+xml;base64,{{icon.svg}}') no-repeat top left / cover; width:{{sizeSelected.value}}px; height:{{sizeSelected.value}}px; "></div>
+         
+        </div>
+    </div>-->
+
+
+<!--
+ <div class="row">
+            <div class="col-xs-6">
+                <ul ui-on-Drop="onDrop($event,$data,men)">
+                    <li ui-draggable="true" drag="man" 
+                    on-drop-success="dropSuccessHandler($event,$index,men)"
+                    ng-repeat="man in men track by $index">
+                        {{man}}
+                    </li>
+                </ul>
+            </div>
+            
+        </div>-->

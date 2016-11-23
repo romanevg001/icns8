@@ -1,0 +1,156 @@
+ @import './../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+ @import './../../node_modules/angularjs-color-picker/dist/angularjs-color-picker.min.css';
+ @import './../../node_modules/angularjs-color-picker/dist/themes/angularjs-color-picker-bootstrap.min.css';
+.errors{
+  margin-top: 30px;
+  text-align: center;
+  &.left-text{
+    text-align: left;
+  }
+  .error{
+    &, span{
+      color: #CF0404;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+
+$dark-blue: #0a5071;
+$darken-blue: #344e61;
+$light-blue: #3bc4ef;
+$lighten-blue: #b6dbdf;
+$light-grey: #d1d5d8;
+$red: #ef6755;
+$mint: #1eb29e;
+
+
+$btn-default-color:              $darken-blue !default;
+$btn-default-bg:                 $lighten-blue !default;
+$btn-default-border:             $lighten-blue !default;
+//@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//@import "../fonts/font-awesome.min.css";
+
+
+
+
+.__loading {
+  //animation: A_loading 1.5s ease;
+  //animation-fill-mode: forwards;
+  min-height: 20px;
+
+  &:before {
+    display: block;
+    opacity: 0;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    //position: absolute;
+    //z-index: 6;
+    //top:0;
+    //left: 0;
+    content: '';
+    background-color: $btn-default-border;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.5) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.5) 75%,transparent 75%,transparent);
+    background-size: 30px 30px;
+    animation: progress 1s infinite linear ;
+  }
+  //& > * {
+  //  opacity: 1;
+  //
+  //  //animation: A_loading_innerElms 1s ease;
+  //  animation-fill-mode: forwards;
+  //}
+  //backface-visibility: hidden;
+  //$brand-info
+}
+
+
+@keyframes progress {
+  from {
+    background-position: 0 0;
+    opacity: 1;
+  }
+  to {
+    background-position: -60px 0;
+    opacity: 1;
+  }
+}
+@keyframes A_loading_innerElms {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes A_loading {
+  0% {
+
+
+  }
+  25% {
+    transform: rotateY(180deg);
+    height: 280px;
+    //height: 25px;
+    //& > * {
+    //  display: none;
+    //}
+    //background: $brand-info;
+  }
+  50% {
+
+    > * {
+      opacity: 0;
+    }
+  //  background: $brand-info;
+  }
+  100% {
+    transform: rotateY(180deg);
+    height: 20px;
+    padding: 0;
+    overflow: hidden;
+    > * {
+      opacity: 0;
+    }
+    //background: $brand-info;
+  }
+}
+
+
+.listIcons {
+ 
+  overflow-y: scroll;
+  padding: 0 20px 20px 20px;
+  max-height: 400px;
+  min-height: 300px;
+  
+  div {
+    float: left;
+    display: block;
+    padding: 7px;
+  }
+}
+
+
+.svgimg {
+  background-color: red;
+    // -webkit-mask:  url(icon.svg) no-repeat 50% 50%;
+    // mask: url(icon.svg) no-repeat 50% 50%;
+}
+
+
+.modal {
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+
+  
+  right: auto;
+  bottom: auto;
+}
